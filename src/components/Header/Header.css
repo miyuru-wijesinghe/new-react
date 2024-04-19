@@ -1,0 +1,82 @@
+header {
+    position: relative;
+    min-height: 100vh;
+    background: url(../../assets/cover.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header .container-fluid {
+    max-width: 1280px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 40px;
+    max-width: 631px;
+    padding: 24px 40px 32px 40px;
+    background: linear-gradient(257deg, var(--analogous-color-2) 27.86%, var(--dark-color-2) 100%), var(--main-color-1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.caption h1 {
+    color: var(--main-color-1);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.96px;
+    text-transform: capitalize;
+}
+
+/* media queries */
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    header .container {
+        padding: 0 35px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .caption.small {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    header .caption {
+        display: none;
+    }
+
+    .caption.small{
+        position: relative;
+        bottom: 0;
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        min-height: 670px;
+    }
+
+    nav {
+        padding: 26px 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        min-height: 328px;
+    }
+
+    .caption {
+        padding: 24px 20px 32px 20px;
+    }
+
+    .caption h1 {
+        font-size: 36px;
+    }
+}
